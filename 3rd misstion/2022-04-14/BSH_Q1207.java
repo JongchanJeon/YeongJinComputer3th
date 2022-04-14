@@ -1,6 +1,6 @@
 package CodeUp;
 import java.util.Scanner;
-public class BSH_q1207 {
+public class BSH_Q1207 {
 
 	public static void main(String[] args) {
 		
@@ -13,22 +13,22 @@ public class BSH_q1207 {
 		}
 		
 		if(sum==1) {
-			System.out.print("µµ");
+			System.out.print("ë„");
 		}else if(sum==2) {
-			System.out.print("°³");
+			System.out.print("ê°œ");
 		}else if(sum==3) {
-			System.out.print("°É");
+			System.out.print("ê±¸");
 		}else if(sum==4) {
-			System.out.print("À·");
+			System.out.print("ìœ·");
 		}else if(sum==0) {
-			System.out.print("¸ğ");
+			System.out.print("ëª¨");
 		}
 		
 		/*
 		 20220414
-		 ¹®Á¦ÀÌÇØµµ:1(1~5»çÀÌ ¼ıÀÚ)
-		 ¹®Á¦ ÇØ°á : o
-		 ÄÚµù ½Ã°£ : 13ºĞ
+		 ë¬¸ì œì´í•´ë„:1(1~5ì‚¬ì´ ìˆ«ì)
+		 ë¬¸ì œ í•´ê²° : o
+		 ì½”ë”© ì‹œê°„ : 13ë¶„
 		 */
 
 	}
