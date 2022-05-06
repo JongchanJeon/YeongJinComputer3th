@@ -9,12 +9,12 @@ public class YDY_Q_1082 {
 
 		String n = sc.next();
 
-		int num = Integer.parseInt(n, 16); // 16Áø¼ö¸¦ 10Áø¼ö·Î
+		int num = Integer.parseInt(n, 16); // 16ì§„ìˆ˜ë¥¼ 10ì§„ìˆ˜ë¡œ
 
 		for (int i = 1; i <= 15; i++) {
 			int mul = num * i;
 
-			String a = Integer.toHexString(i); // 10Áø¼ö¸¦ 16Áø¼ö·Î
+			String a = Integer.toHexString(i); // 10ì§„ìˆ˜ë¥¼ 16ì§„ìˆ˜ë¡œ
 			String b = Integer.toHexString(mul); //
 
 			System.out.println(n + "*" + a.toUpperCase() + "=" + b.toUpperCase());
@@ -25,7 +25,7 @@ public class YDY_Q_1082 {
 
 /*
  * 2022-05-07 
- * ¹®Á¦ ÀÌÇØµµ : 5
- * ¹®Á¦ ÇØ°á : O 
- * ÄÚµù ½Ã°£ : 2ºÐ
+ * ë¬¸ì œ ì´í•´ë„ : 2
+ * ë¬¸ì œ í•´ê²° : O 
+ * ì½”ë”© ì‹œê°„ : 25ë¶„
  */
