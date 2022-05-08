@@ -11,7 +11,8 @@ public class KJW_Q1411 {
 
 		for(int i=0; i<arr.length-1; i++) { // 한 개 빼고 받으니까 길이 -1만큼 반복문 
 			int tmp=sc.nextInt(); // 한 개씩 입력 받음 
-			arr[tmp-1]++;  // 입력받는 수의 배열 인덱스에 1을 더해줌 ( 배열의 인덱스는 0부터 시작이기때문에 tmp-1)
+			arr[tmp-1]++;  // 입력받는 수의 배열 인덱스에 1을 더해줌 
+			// 배열의 초기값은 다 0이기 때문에 1이 되면 값이 있다는 말(배열의 인덱스는 0부터 시작이기때문에 tmp-1)
 		}
 		for(int i=0; i<arr.length; i++) { 
 			if(arr[i]==0) System.out.print(i+1);
