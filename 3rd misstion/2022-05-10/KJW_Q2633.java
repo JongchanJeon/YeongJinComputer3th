@@ -13,11 +13,11 @@ public class KJW_Q2633 {
 			arr[i]=sc.nextInt();
 		}
 		
-		int result=-1; // 임의의 정수 최소값 정함 
+		int result=-1; // result에 임의의 값 정함 
 		
 		for(int i=0; i<arr.length; i++) {
 			if(k<=arr[i]) { // 배열 돌면서 k 이상인 값 찾고 
-				result=i+1; break; // result 에 값을 넣고 포문 나김 
+				result=i+1; break; // result 에 값을 넣으면 포문 나감
 			}
 		}
 		if(result==-1) System.out.print(n+1); // result가 초기값과 같다는 건 이상인 값이 없다는 것 
