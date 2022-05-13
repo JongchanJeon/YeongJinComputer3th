@@ -7,11 +7,11 @@ public class YDY_Q1267 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 
-		int n = sc.nextInt(); // ÅëÈ­ÀÇ °³¼ö n°³
+		int n = sc.nextInt(); // í†µí™”ì˜ ê°œìˆ˜ nê°œ
 		int y = 0, m = 0;
 
 		for (int i = 0; i < n; i++) {
-			int time = sc.nextInt(); // ÅëÈ­ ½Ã°£
+			int time = sc.nextInt(); // í†µí™” ì‹œê°„
 
 			y += (time / 30 + 1) * 10;
 			m += (time / 60 + 1) * 15;
@@ -27,8 +27,8 @@ public class YDY_Q1267 {
 }
 
 /*
- * 2022-05-10 
- * ¹®Á¦ ÀÌÇØµµ : 4(1~5»çÀÌ ¼ıÀÚ) 
- * ¹®Á¦ ÇØ°á : O 
- * ÄÚµù ½Ã°£ : 15ºĞ
+ * 2022-05-14
+ * ë¬¸ì œ ì´í•´ë„ : 4(1~5ì‚¬ì´ ìˆ«ì) 
+ * ë¬¸ì œ í•´ê²° : O 
+ * ì½”ë”© ì‹œê°„ : 15ë¶„
  */
