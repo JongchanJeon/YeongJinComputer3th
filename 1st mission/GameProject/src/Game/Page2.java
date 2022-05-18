@@ -20,6 +20,8 @@ public class Page2 extends JPanel{
 	 
 	//다음 버튼
 	 public void page2Btn() {
+		 Page3 page3 = new Page3();
+		 
 		 nextBtn.setVisible(true);
 		 nextBtn.setBounds(1000,500,200,100);
 	     nextBtn.setBorderPainted(false); 
