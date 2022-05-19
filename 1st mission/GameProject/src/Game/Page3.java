@@ -7,14 +7,14 @@ import javax.swing.*;
 public class Page3 {
 	
 	private ImageIcon diaryLabel = new ImageIcon(Main.class.getResource("../images/diaryLabel.png"));
-	private ImageIcon imgBoxLabel = new ImageIcon(Main.class.getResource("../images/이미지박스.png"));
+	private ImageIcon imgBoxLabel = new ImageIcon(Main.class.getResource("../images/imageBox.png"));
 	private ImageIcon nextButtonEnteredImage= new ImageIcon(Main.class.getResource("../images/nextButtonEntered.png"));
 	private ImageIcon nextButtonImage= new ImageIcon(Main.class.getResource("../images/nextButton.png"));
-	private ImageIcon select1Btnimg = new ImageIcon(Main.class.getResource("../images/선택지.png"));
-	private ImageIcon select2Btnimg = new ImageIcon(Main.class.getResource("../images/선택지.png"));
+	private ImageIcon select1Btnimg = new ImageIcon(Main.class.getResource("../images/select1Btn.png"));
+	private ImageIcon select2Btnimg = new ImageIcon(Main.class.getResource("../images/select2Btn.png"));
 	 
-	JButton select1Btn = new JButton(imgBoxLabel);
-	JButton select2Btn = new JButton(imgBoxLabel);
+	JButton select1Btn = new JButton(select1Btnimg);
+	JButton select2Btn = new JButton(select2Btnimg);
 	JButton nextBtnPage3 = new JButton(nextButtonImage);
 	
 	JLabel diary = new JLabel(diaryLabel);
