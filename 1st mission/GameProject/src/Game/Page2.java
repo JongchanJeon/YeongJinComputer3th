@@ -5,13 +5,14 @@ import java.awt.event.*;
 import javax.swing.*;
 
 public class Page2 extends JPanel{
+	
 	 private ImageIcon nextButtonEnteredImage= new ImageIcon(Main.class.getResource("../images/nextButtonEntered.png"));
 	 private ImageIcon nextButtonImage= new ImageIcon(Main.class.getResource("../images/nextButton.png"));
 	 private ImageIcon textBoxImage = new ImageIcon(Main.class.getResource("../images/textBox.png"));
+	 private Image page3bg = new ImageIcon(Main.class.getResource("../images/page3Bg.png")).getImage();
 
 	 JButton nextBtn = new JButton(nextButtonImage);
 	 JLabel textBox = new JLabel();
-	 
 	 
 	 Page2(){
 		 page2Btn();
@@ -20,6 +21,7 @@ public class Page2 extends JPanel{
 	 
 	//다음 버튼
 	 public void page2Btn() {
+		 
 		 Page3 page3 = new Page3();
 		 
 		 nextBtn.setVisible(true);
@@ -43,7 +45,13 @@ public class Page2 extends JPanel{
 	         public void mousePressed(MouseEvent e) {
 	        	nextBtn.setVisible(false);
 	        	textBox.setVisible(false);
-	           /* 다음 화면 전환 추가 예정 */
+	        	Game.mainPanel.add(page3.nextBtnPage3);
+	        	Game.mainPanel.add(page3.textBoxPage3);
+	        	Game.mainPanel.add(page3.diary);
+	        	Game.mainPanel.add(page3.imgBox);
+	        	Game.mainPanel.add(page3.select1Btn);
+	        	Game.mainPanel.add(page3.select2Btn);
+	            Game.mainPanel.pageBackground = page3bg;
 	         }
 	      });
 	 }

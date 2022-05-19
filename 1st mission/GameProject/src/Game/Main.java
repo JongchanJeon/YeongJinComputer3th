@@ -38,6 +38,7 @@ public class Main {
 	        mainPanel.add(page1.quitBtn); 
 	   }
 	 }
+	
 		class MyPanel extends JPanel{
 			// 패널에 등록될 배경화면
 			public static Image pageBackground = new ImageIcon(Main.class.getResource("../images/introBackground.png")).getImage();
