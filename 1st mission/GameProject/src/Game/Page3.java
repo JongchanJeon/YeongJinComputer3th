@@ -20,6 +20,7 @@ public class Page3 {
 	JLabel diary = new JLabel(diaryLabel);
 	JLabel imgBox = new JLabel(imgBoxLabel);
 	JLabel textBoxPage3 = new JLabel();
+	Engine engine = new Engine();
 	
 	Page3(){
 		page3NextBtn();
@@ -53,6 +54,14 @@ public class Page3 {
 	        	 nextBtnPage3.setVisible(false);
 	        	 select2Btn.setVisible(true);
 	        	 select1Btn.setVisible(true);
+	        	 engine.EventNum++;
+	        	 textBoxPage3.setText(engine.eventScript());
+	        	 select1Btn.setHorizontalTextPosition(JButton.CENTER); // 이거랑
+	        	 select1Btn.setVerticalTextPosition(JButton.CENTER); // 이거 없으면 텍스트 안떠요
+	        	 select1Btn.setText(engine.select1Text());
+	        	 select2Btn.setHorizontalTextPosition(JButton.CENTER); // 이거랑
+	        	 select2Btn.setVerticalTextPosition(JButton.CENTER); // 이거 없으면 텍스트 안떠요
+	        	 select2Btn.setText(engine.select2Text());
 	         }
 	      });
 	}
@@ -62,7 +71,11 @@ public class Page3 {
 		select1Btn.setBounds(660,450,280,200);
 		select1Btn.setBorderPainted(false);
 		select1Btn.setContentAreaFilled(false);
-		select1Btn.setFocusPainted(false); 
+		select1Btn.setFocusPainted(false);
+		select1Btn.setForeground(Color.black);
+		select1Btn.setHorizontalTextPosition(JButton.CENTER); // 이거랑
+		select1Btn.setVerticalTextPosition(JButton.CENTER); // 이거 없으면 텍스트 안떠요
+		select1Btn.setText(engine.select1Text());
 		
 		select1Btn.addMouseListener(new MouseAdapter() {
 	         @Override
@@ -78,6 +91,7 @@ public class Page3 {
 	        	 nextBtnPage3.setVisible(true);
 	        	 select2Btn.setVisible(false);
 	        	 select1Btn.setVisible(false);
+	        	 textBoxPage3.setText(engine.select1Script());
 	         }
 	      });
 	}
@@ -87,7 +101,10 @@ public class Page3 {
 		select2Btn.setBounds(960,450,280,200);
 		select2Btn.setBorderPainted(false);
 		select2Btn.setContentAreaFilled(false);
-		select2Btn.setFocusPainted(false); 
+		select2Btn.setFocusPainted(false);
+		select2Btn.setHorizontalTextPosition(JButton.CENTER); // 이거랑
+		select2Btn.setVerticalTextPosition(JButton.CENTER); // 이거 없으면 텍스트 안떠요
+		select2Btn.setText(engine.select2Text());
 		
 		select2Btn.addMouseListener(new MouseAdapter() {
 	         @Override
@@ -103,6 +120,7 @@ public class Page3 {
 	        	 nextBtnPage3.setVisible(true);
 	        	 select2Btn.setVisible(false);
 	        	 select1Btn.setVisible(false);
+	        	 textBoxPage3.setText(engine.select2Script());
 	         }
 	      });
 	}
@@ -128,7 +146,7 @@ public class Page3 {
 		 		
 		 textBoxPage3.setVisible(true);
 		 textBoxPage3.setBounds(20,20,610,650);
-		 textBoxPage3.setText(test); // 텍스트 박스에 들어갈 내용
+		 textBoxPage3.setText(engine.eventScript()); // 텍스트 박스에 들어갈 내용
 		 textBoxPage3.setFont(myFont1); // 텍스트 폰트 변경
 		 
 		 // 텍스트 위치 조정
