@@ -23,6 +23,8 @@ public class Page3 {
 	JLabel textBoxPage3 = new JLabel();
 	Engine engine = new Engine();
 	Ending ending = new Ending();
+	Font myFont1 = new Font("Serif", Font.BOLD, 18);
+	 
 	
 	Page3(){
 		page3NextBtn();
@@ -89,25 +91,26 @@ public class Page3 {
 	      });
 	}
 	public void page3Select1Btn() {
-		
 		select1Btn.setVisible(true);
 		select1Btn.setBounds(660,450,280,200);
 		select1Btn.setBorderPainted(false);
 		select1Btn.setContentAreaFilled(false);
 		select1Btn.setFocusPainted(false);
-		select1Btn.setForeground(Color.black);
-		select1Btn.setHorizontalTextPosition(JButton.CENTER); // 이거랑
-		select1Btn.setVerticalTextPosition(JButton.CENTER); // 이거 없으면 텍스트 안떠요
+		select1Btn.setHorizontalTextPosition(JButton.CENTER); 
+		select1Btn.setVerticalTextPosition(JButton.CENTER); 
+		select1Btn.setFont(myFont1);
 		select1Btn.setText(engine.select1Text());
 		
 		select1Btn.addMouseListener(new MouseAdapter() {
 	         @Override
 	         public void mouseEntered(MouseEvent e) {
 	        	 select1Btn.setCursor(new Cursor(Cursor.HAND_CURSOR));
+	        	 select1Btn.setForeground(Color.white);
 	         }
 	         @Override
 	         public void mouseExited(MouseEvent e) {
 	        	 select1Btn.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+	        	 select1Btn.setForeground(Color.black);
 	         }
 	         @Override
 	         public void mousePressed(MouseEvent e) {
@@ -125,18 +128,21 @@ public class Page3 {
 		select2Btn.setBorderPainted(false);
 		select2Btn.setContentAreaFilled(false);
 		select2Btn.setFocusPainted(false);
-		select2Btn.setHorizontalTextPosition(JButton.CENTER); // 이거랑
-		select2Btn.setVerticalTextPosition(JButton.CENTER); // 이거 없으면 텍스트 안떠요
+		select2Btn.setHorizontalTextPosition(JButton.CENTER); 
+		select2Btn.setVerticalTextPosition(JButton.CENTER); 
+		select2Btn.setFont(myFont1);
 		select2Btn.setText(engine.select2Text());
 		
 		select2Btn.addMouseListener(new MouseAdapter() {
 	         @Override
 	         public void mouseEntered(MouseEvent e) {
 	        	 select2Btn.setCursor(new Cursor(Cursor.HAND_CURSOR));
+	        	 select2Btn.setForeground(Color.white);
 	         }
 	         @Override
 	         public void mouseExited(MouseEvent e) {
 	        	 select2Btn.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+	        	 select2Btn.setForeground(Color.black);
 	         }
 	         @Override
 	         public void mousePressed(MouseEvent e) {
@@ -157,18 +163,8 @@ public class Page3 {
 		imgBox.setBounds(660, 30, 580, 400);
 	}
 	public void page3TextBox() {
-		// 폰트 속성 추가 변수
-		 Font myFont1 = new Font("Serif", Font.BOLD, 18);
-		 
-		 // html처럼 사용해서 줄바꿈, 중앙정렬 가능
-		 String test = "<html><body style='text-align:center;'>죽었다......."
-				+ "<br> 글자를 길게 적어야 중간에 표시가 되네요 약 한줄에 38글자를 적어야 딱 맞는거 같습니다."
-				+ "<br> 글자크기와 텍스트 박스는 수정 가능하니 나중에 맞추면 되겠습니다."
-				+ "<bt> 그런데 이게 규격이 정확하게 맞지 않습니다;;"
-		 		+ "<br> JAVA Team3 game project </body></html>";
-		 		
 		 textBoxPage3.setVisible(true);
-		 textBoxPage3.setBounds(20,20,610,650);
+		 textBoxPage3.setBounds(70,50,530,580);
 		 textBoxPage3.setText(engine.eventScript()); // 텍스트 박스에 들어갈 내용
 		 textBoxPage3.setFont(myFont1); // 텍스트 폰트 변경
 		 
