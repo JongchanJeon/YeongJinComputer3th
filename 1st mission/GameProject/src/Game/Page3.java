@@ -12,6 +12,7 @@ public class Page3 {
 	private ImageIcon nextButtonImage= new ImageIcon(Main.class.getResource("../images/nextButton.png"));
 	private ImageIcon select1Btnimg = new ImageIcon(Main.class.getResource("../images/selectBtnTest.png"));
 	private ImageIcon select2Btnimg = new ImageIcon(Main.class.getResource("../images/selectBtnTest.png"));
+	private Image endingBg = new ImageIcon(Main.class.getResource("../images/aisleBackground.png")).getImage();
 	 
 	JButton select1Btn = new JButton(select1Btnimg);
 	JButton select2Btn = new JButton(select2Btnimg);
@@ -21,6 +22,7 @@ public class Page3 {
 	JLabel imgBox = new JLabel(imgBoxLabel);
 	JLabel textBoxPage3 = new JLabel();
 	Engine engine = new Engine();
+	Ending ending = new Ending();
 	
 	Page3(){
 		page3NextBtn();
@@ -29,6 +31,17 @@ public class Page3 {
 		page3TextBox();
 		page3Select1Btn();
 		page3Select2Btn();
+	}
+	
+	public void goToEnding() {
+		 nextBtnPage3.setVisible(false);
+		 textBoxPage3.setVisible(false);
+		 diary.setVisible(false);
+		 imgBox.setVisible(false);
+		 select1Btn.setVisible(false);
+		 select2Btn.setVisible(false);
+		 Game.mainPanel.add(ending.nextBtnEnding);
+		 Game.mainPanel.pageBackground = endingBg;
 	}
 	
 	public void page3NextBtn() {
@@ -52,16 +65,25 @@ public class Page3 {
 	         @Override
 	         public void mousePressed(MouseEvent e) {
 //	        	 Game.mainPanel.add(diary);
-	        	 nextBtnPage3.setVisible(false);
-	        	 select2Btn.setVisible(true);
-	        	 select1Btn.setVisible(true);
+	        	 //14일차엔 선택지 없이 넥스트 버튼만 나오게
+	        	 if (engine.EventNum < 13) {
+	        		 nextBtnPage3.setVisible(false);
+	        		 select2Btn.setVisible(true);
+	        		 select1Btn.setVisible(true);
+	        	 }
+	        	 //14일차에 넥스트 버튼 누르면 엔딩화면으로 
+	        	 if (engine.EventNum == 14) {
+	        		 goToEnding();
+	        		 Game.mainPanel.add(ending.diary2);
+	        	 }
+	        	 //라이프 0이여도 엔딩화면으로
+	        	 if (Engine.Life == 0) {
+	        		 goToEnding();
+	        		 Game.mainPanel.add(ending.diary1);
+	        	 }
 	        	 engine.EventNum++;
 	        	 textBoxPage3.setText(engine.eventScript());
-	        	 select1Btn.setHorizontalTextPosition(JButton.CENTER); // 이거랑
-	        	 select1Btn.setVerticalTextPosition(JButton.CENTER); // 이거 없으면 텍스트 안떠요
 	        	 select1Btn.setText(engine.select1Text());
-	        	 select2Btn.setHorizontalTextPosition(JButton.CENTER); // 이거랑
-	        	 select2Btn.setVerticalTextPosition(JButton.CENTER); // 이거 없으면 텍스트 안떠요
 	        	 select2Btn.setText(engine.select2Text());
 	         }
 	      });
