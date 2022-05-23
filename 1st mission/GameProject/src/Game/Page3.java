@@ -30,6 +30,7 @@ public class Page3 {
 		page3Select1Btn();
 		page3Select2Btn();
 	}
+	
 	public void page3NextBtn() {
 		nextBtnPage3.setVisible(false);
 		nextBtnPage3.setBounds(900,500,100,100);
