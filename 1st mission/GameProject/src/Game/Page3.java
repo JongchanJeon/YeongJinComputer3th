@@ -6,17 +6,17 @@ import javax.swing.*;
 
 public class Page3 {
 	
-	private ImageIcon diaryLabel = new ImageIcon(Main.class.getResource("../images/diaryLabel.png"));
-	private ImageIcon imgBoxLabel = new ImageIcon(Main.class.getResource("../images/imageBox.png"));
+	private ImageIcon diaryLabel = new ImageIcon(Main.class.getResource("../images/diaryImgTest.png"));
+	private ImageIcon imgBoxLabel = new ImageIcon(Main.class.getResource("../images/imgBoxTest.png"));
 	private ImageIcon nextButtonEnteredImage= new ImageIcon(Main.class.getResource("../images/nextButtonEntered.png"));
 	private ImageIcon nextButtonImage= new ImageIcon(Main.class.getResource("../images/nextButton.png"));
-	private ImageIcon select1Btnimg = new ImageIcon(Main.class.getResource("../images/select1Btn.png"));
-	private ImageIcon select2Btnimg = new ImageIcon(Main.class.getResource("../images/select2Btn.png"));
+	private ImageIcon select1Btnimg = new ImageIcon(Main.class.getResource("../images/selectBtnTest.png"));
+	private ImageIcon select2Btnimg = new ImageIcon(Main.class.getResource("../images/selectBtnTest.png"));
 	 
 	JButton select1Btn = new JButton(select1Btnimg);
 	JButton select2Btn = new JButton(select2Btnimg);
 	JButton nextBtnPage3 = new JButton(nextButtonImage);
-	
+
 	JLabel diary = new JLabel(diaryLabel);
 	JLabel imgBox = new JLabel(imgBoxLabel);
 	JLabel textBoxPage3 = new JLabel();
@@ -31,9 +31,8 @@ public class Page3 {
 		page3Select2Btn();
 	}
 	public void page3NextBtn() {
-		
 		nextBtnPage3.setVisible(false);
-		nextBtnPage3.setBounds(933,560,100,100);
+		nextBtnPage3.setBounds(900,500,100,100);
 		nextBtnPage3.setBorderPainted(false); 
 		nextBtnPage3.setContentAreaFilled(false); 
 		nextBtnPage3.setFocusPainted(false); 
@@ -51,7 +50,7 @@ public class Page3 {
 	         }
 	         @Override
 	         public void mousePressed(MouseEvent e) {
-//	        	Game.mainPanel.add(diary);
+//	        	 Game.mainPanel.add(diary);
 	        	 nextBtnPage3.setVisible(false);
 	        	 select2Btn.setVisible(true);
 	        	 select1Btn.setVisible(true);
@@ -69,7 +68,7 @@ public class Page3 {
 	public void page3Select1Btn() {
 		
 		select1Btn.setVisible(true);
-		select1Btn.setBounds(652,516,276,120);
+		select1Btn.setBounds(660,450,280,200);
 		select1Btn.setBorderPainted(false);
 		select1Btn.setContentAreaFilled(false);
 		select1Btn.setFocusPainted(false);
@@ -99,7 +98,7 @@ public class Page3 {
 	public void page3Select2Btn() {
 		
 		select2Btn.setVisible(true);
-		select2Btn.setBounds(968,516,276,120);
+		select2Btn.setBounds(960,450,280,200);
 		select2Btn.setBorderPainted(false);
 		select2Btn.setContentAreaFilled(false);
 		select2Btn.setFocusPainted(false);
@@ -127,12 +126,12 @@ public class Page3 {
 	}
 	public void page3Diary() {
 		diary.setVisible(true);
-		diary.setBounds(20,20,610,650);
-		
+		diary.setBounds(30,30,600,620);
 	}
+	
 	public void page3ImgBox() {
 		imgBox.setVisible(true);
-		imgBox.setBounds(651, 20, 592, 444);
+		imgBox.setBounds(660, 30, 580, 400);
 	}
 	public void page3TextBox() {
 		// 폰트 속성 추가 변수
