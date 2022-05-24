@@ -1,4 +1,4 @@
-package _2022_05_15;
+package _2022_05_24;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -22,7 +22,7 @@ public class YDY_Q2605 {
 }
 /*
 2022-05-24
-¹®Á¦ ÀÌÇØµµ : 5
-¹®Á¦ ÇØ°á : O
-ÄÚµù ½Ã°£ : 7ºĞ
+ë¬¸ì œ ì´í•´ë„ : 3
+ë¬¸ì œ í•´ê²° : O
+ì½”ë”© ì‹œê°„ : 1ì‹œê°„ 48ë¶„
 */
