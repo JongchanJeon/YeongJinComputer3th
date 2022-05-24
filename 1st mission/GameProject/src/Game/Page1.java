@@ -11,7 +11,7 @@ public class Page1 {
    private ImageIcon quitButtonEnteredImage= new ImageIcon(Main.class.getResource("../images/quitButtonEntered.png"));
    private ImageIcon quitButtonImage= new ImageIcon(Main.class.getResource("../images/quitButtonBasic.png"));
    
-   private Image aisleBackground = new ImageIcon(Main.class.getResource("../images/aisleBackground.png")).getImage();
+   private Image page2Bg = new ImageIcon(Main.class.getResource("../images/page2Bg.png")).getImage();
    
    JButton startBtn = new JButton(startButtonImage);
    JButton quitBtn = new JButton(quitButtonImage);
@@ -55,7 +55,7 @@ public class Page1 {
            Game.mainPanel.add(page2.textBox);
            Game.mainPanel.add(page2.nextBtn);
            // 다음 페이지 배경 화면 변경 Game.mainPanel.pageBackground = 배경변수명;
-           Game.mainPanel.pageBackground = aisleBackground;
+           Game.mainPanel.pageBackground = page2Bg;
         }
      });
        

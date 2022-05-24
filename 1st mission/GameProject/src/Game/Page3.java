@@ -10,12 +10,12 @@ public class Page3 {
 	private ImageIcon imgBoxLabel = new ImageIcon(Main.class.getResource("../images/imgBoxTest.png"));
 	private ImageIcon nextButtonEnteredImage= new ImageIcon(Main.class.getResource("../images/nextButtonEntered.png"));
 	private ImageIcon nextButtonImage= new ImageIcon(Main.class.getResource("../images/nextButton.png"));
-	private ImageIcon select1Btnimg = new ImageIcon(Main.class.getResource("../images/selectBtnTest.png"));
-	private ImageIcon select2Btnimg = new ImageIcon(Main.class.getResource("../images/selectBtnTest.png"));
+	private ImageIcon selectBtnImage = new ImageIcon(Main.class.getResource("../images/selectBtnBasic.png"));
+	private ImageIcon selectBtnEnteredImage = new ImageIcon(Main.class.getResource("../images/selectBtnEntered.png"));
 	private Image endingBg = new ImageIcon(Main.class.getResource("../images/aisleBackground.png")).getImage();
 	 
-	JButton select1Btn = new JButton(select1Btnimg);
-	JButton select2Btn = new JButton(select2Btnimg);
+	JButton select1Btn = new JButton(selectBtnImage);
+	JButton select2Btn = new JButton(selectBtnImage);
 	JButton nextBtnPage3 = new JButton(nextButtonImage);
 
 	JLabel diary = new JLabel(diaryLabel);
@@ -104,11 +104,13 @@ public class Page3 {
 		select1Btn.addMouseListener(new MouseAdapter() {
 	         @Override
 	         public void mouseEntered(MouseEvent e) {
+	        	 select1Btn.setIcon(selectBtnEnteredImage);
 	        	 select1Btn.setCursor(new Cursor(Cursor.HAND_CURSOR));
 	        	 select1Btn.setForeground(Color.white);
 	         }
 	         @Override
 	         public void mouseExited(MouseEvent e) {
+	        	 select1Btn.setIcon(selectBtnImage);
 	        	 select1Btn.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
 	        	 select1Btn.setForeground(Color.black);
 	         }
@@ -136,11 +138,13 @@ public class Page3 {
 		select2Btn.addMouseListener(new MouseAdapter() {
 	         @Override
 	         public void mouseEntered(MouseEvent e) {
+	        	 select2Btn.setIcon(selectBtnEnteredImage);
 	        	 select2Btn.setCursor(new Cursor(Cursor.HAND_CURSOR));
 	        	 select2Btn.setForeground(Color.white);
 	         }
 	         @Override
 	         public void mouseExited(MouseEvent e) {
+	        	 select2Btn.setIcon(selectBtnImage);
 	        	 select2Btn.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
 	        	 select2Btn.setForeground(Color.black);
 	         }
