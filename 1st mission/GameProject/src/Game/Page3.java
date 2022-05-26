@@ -6,19 +6,25 @@ import javax.swing.*;
 
 public class Page3 {
 	
-	private ImageIcon diaryLabel = new ImageIcon(Main.class.getResource("../images/threeLifeDiary.png"));
+	//private ImageIcon diaryLabel = new ImageIcon(Main.class.getResource("../images/threeLifeDiary.png"));
 	private ImageIcon imgBoxLabel = new ImageIcon(Main.class.getResource("../images/imgBoxTest.png"));
 	private ImageIcon nextButtonEnteredImage= new ImageIcon(Main.class.getResource("../images/nextButtonEntered.png"));
 	private ImageIcon nextButtonImage= new ImageIcon(Main.class.getResource("../images/nextButton.png"));
 	private ImageIcon selectBtnImage = new ImageIcon(Main.class.getResource("../images/selectBtnBasic.png"));
 	private ImageIcon selectBtnEnteredImage = new ImageIcon(Main.class.getResource("../images/selectBtnEntered.png"));
 	private Image endingBg = new ImageIcon(Main.class.getResource("../images/aisleBackground.png")).getImage();
+	private ImageIcon Life3Bg = new ImageIcon(Main.class.getResource("../images/threeLifeDiary.png"));
+	private ImageIcon Life2Bg = new ImageIcon(Main.class.getResource("../images/twoLifeDiary.png"));
+	private ImageIcon Life1Bg = new ImageIcon(Main.class.getResource("../images/oneLifeDiary.png"));
+	private ImageIcon Life0Bg = new ImageIcon(Main.class.getResource("../images/zeroLifeDiary.png"));
+	private ImageIcon ImgBoxTest2 = new ImageIcon(Main.class.getResource("../images/ImgBoxTest2.png"));
+	private ImageIcon ImgBoxTest4 = new ImageIcon(Main.class.getResource("../images/ImgBoxTest4.png"));
 	 
 	JButton select1Btn = new JButton(selectBtnImage);
 	JButton select2Btn = new JButton(selectBtnImage);
 	JButton nextBtnPage3 = new JButton(nextButtonImage);
 
-	JLabel diary = new JLabel(diaryLabel);
+	JLabel diary = new JLabel(Life3Bg);
 	JLabel imgBox = new JLabel(imgBoxLabel);
 	JLabel dayBox = new JLabel();
 	JLabel textBoxPage3 = new JLabel();
@@ -35,7 +41,6 @@ public class Page3 {
 		page3TextBox();
 		page3Select1Btn();
 		page3Select2Btn();
-		
 	}
 	
 	public void page3NextBtn() {
@@ -59,13 +64,13 @@ public class Page3 {
 	         @Override
 	         public void mousePressed(MouseEvent e) {
 	        	 //14일차엔 선택지 없이 넥스트 버튼만 나오게
-	        	 if (engine.EventNum < 13) {
+	        	 if (Engine.EventNum < 13) {
 	        		 nextBtnPage3.setVisible(false);
 	        		 select2Btn.setVisible(true);
 	        		 select1Btn.setVisible(true);
 	        	 }
 	        	 //14일차에 넥스트 버튼 누르면 엔딩화면으로 
-	        	 if (engine.EventNum == 14) {
+	        	 if (Engine.EventNum == 14) {
 	        		 goToEnding();
 	        		 Game.mainPanel.add(ending.endingTextBox);
 	        		 Game.mainPanel.add(ending.endingdiary);
@@ -78,11 +83,12 @@ public class Page3 {
 	        		 Game.mainPanel.add(ending.endingdiary);
 	        		 ending.endingTextBox.setText(ending.gameOverText);
 	        	 }
-	        	 engine.EventNum++;
-	        	 dayBox.setText("DAY "+engine.EventNum); // 텍스트 박스에 들어갈 내용
+	        	 Engine.EventNum++;
+	        	 dayBox.setText("DAY "+Engine.EventNum); // 텍스트 박스에 들어갈 내용
 	        	 textBoxPage3.setText(engine.eventScript());
 	        	 select1Btn.setText(engine.select1Text());
 	        	 select2Btn.setText(engine.select2Text());
+	        	 imageChanger();
 	         }
 	      });
 	}
@@ -117,6 +123,7 @@ public class Page3 {
 	        	 select2Btn.setVisible(false);
 	        	 select1Btn.setVisible(false);
 	        	 textBoxPage3.setText(engine.select1Script());
+	        	 lifeChecker();
 	         }
 	      });
 	}
@@ -152,6 +159,7 @@ public class Page3 {
 	        	 select2Btn.setVisible(false);
 	        	 select1Btn.setVisible(false);
 	        	 textBoxPage3.setText(engine.select2Script());
+	        	 lifeChecker();
 	         }
 	      });
 	}
@@ -175,7 +183,7 @@ public class Page3 {
 	public void page3DayBox() {
 		dayBox.setVisible(true);
 		dayBox.setBounds(350,-25,200,200);
-		dayBox.setText("DAY "+engine.EventNum); // 텍스트 박스에 들어갈 내용
+		dayBox.setText("DAY "+Engine.EventNum); // 텍스트 박스에 들어갈 내용
 		dayBox.setFont(new Font("고딕", Font.BOLD, 45)); // 텍스트 폰트 변경
 	 }
 	
@@ -189,5 +197,16 @@ public class Page3 {
 		 dayBox.setVisible(false);
 		 Game.mainPanel.add(ending.nextBtnEnding);
 		 Game.mainPanel.pageBackground = endingBg;
+	}
+	public void lifeChecker() {
+		if (Engine.Life == 3) { diary.setIcon(Life3Bg); }
+		else if (Engine.Life == 2) { diary.setIcon(Life2Bg); }
+		else if (Engine.Life == 1) { diary.setIcon(Life1Bg); }
+		else if (Engine.Life == 0) { diary.setIcon(Life0Bg); }
+	}
+	
+	public void imageChanger() {
+		if (Engine.EventNum == 2) { imgBox.setIcon(ImgBoxTest2); }
+		else if (Engine.EventNum == 4) { imgBox.setIcon(ImgBoxTest4); }
 	}
 }
