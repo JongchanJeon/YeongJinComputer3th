@@ -174,10 +174,10 @@ public class Page3 {
 	}
 	public void page3TextBox() {
 		 textBoxPage3.setVisible(true);
-		 textBoxPage3.setBounds(70,0,530,580);
+		 textBoxPage3.setBounds(70,0,530,720);
 		 textBoxPage3.setText(engine.eventScript()); // 텍스트 박스에 들어갈 내용
 		 textBoxPage3.setFont(myFont1); // 텍스트 폰트 변경
-		 //textBoxPage3.setVerticalTextPosition(JLabel.TOP);
+		 // textBoxPage3.setVerticalTextPosition(JLabel.TOP); 이거 왜 작동 안해요?
 	 }
 	
 	public void page3DayBox() {
@@ -186,6 +186,7 @@ public class Page3 {
 		dayBox.setText("DAY "+Engine.EventNum); // 텍스트 박스에 들어갈 내용
 		dayBox.setFont(new Font("고딕", Font.BOLD, 45)); // 텍스트 폰트 변경
 	 }
+	
 	
 	public void goToEnding() {
 		 nextBtnPage3.setVisible(false);
@@ -203,8 +204,7 @@ public class Page3 {
 		else if (Engine.Life == 2) { diary.setIcon(Life2Bg); }
 		else if (Engine.Life == 1) { diary.setIcon(Life1Bg); }
 		else if (Engine.Life == 0) { diary.setIcon(Life0Bg); }
-	}
-	
+	}	
 	public void imageChanger() {
 		if (Engine.EventNum == 2) { imgBox.setIcon(ImgBoxTest2); }
 		else if (Engine.EventNum == 4) { imgBox.setIcon(ImgBoxTest4); }
