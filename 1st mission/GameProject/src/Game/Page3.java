@@ -6,7 +6,7 @@ import javax.swing.*;
 
 public class Page3 {
 	
-	private ImageIcon diaryLabel = new ImageIcon(Main.class.getResource("../images/diaryImgTest.png"));
+	private ImageIcon diaryLabel = new ImageIcon(Main.class.getResource("../images/threeLifeDiary.png"));
 	private ImageIcon imgBoxLabel = new ImageIcon(Main.class.getResource("../images/imgBoxTest.png"));
 	private ImageIcon nextButtonEnteredImage= new ImageIcon(Main.class.getResource("../images/nextButtonEntered.png"));
 	private ImageIcon nextButtonImage= new ImageIcon(Main.class.getResource("../images/nextButton.png"));
@@ -20,30 +20,22 @@ public class Page3 {
 
 	JLabel diary = new JLabel(diaryLabel);
 	JLabel imgBox = new JLabel(imgBoxLabel);
+	JLabel dayBox = new JLabel();
 	JLabel textBoxPage3 = new JLabel();
 	Engine engine = new Engine();
 	Ending ending = new Ending();
-	Font myFont1 = new Font("Serif", Font.BOLD, 18);
+	public static Font myFont1 = new Font("나눔손글씨 강부장님체", Font.BOLD, 26);
 	 
 	
 	Page3(){
+		page3DayBox();
 		page3NextBtn();
 		page3ImgBox();
 		page3Diary();
 		page3TextBox();
 		page3Select1Btn();
 		page3Select2Btn();
-	}
-	
-	public void goToEnding() {
-		 nextBtnPage3.setVisible(false);
-		 textBoxPage3.setVisible(false);
-		 diary.setVisible(false);
-		 imgBox.setVisible(false);
-		 select1Btn.setVisible(false);
-		 select2Btn.setVisible(false);
-		 Game.mainPanel.add(ending.nextBtnEnding);
-		 Game.mainPanel.pageBackground = endingBg;
+		
 	}
 	
 	public void page3NextBtn() {
@@ -66,7 +58,6 @@ public class Page3 {
 	         }
 	         @Override
 	         public void mousePressed(MouseEvent e) {
-//	        	 Game.mainPanel.add(diary);
 	        	 //14일차엔 선택지 없이 넥스트 버튼만 나오게
 	        	 if (engine.EventNum < 13) {
 	        		 nextBtnPage3.setVisible(false);
@@ -76,14 +67,19 @@ public class Page3 {
 	        	 //14일차에 넥스트 버튼 누르면 엔딩화면으로 
 	        	 if (engine.EventNum == 14) {
 	        		 goToEnding();
-	        		 Game.mainPanel.add(ending.diary2);
+	        		 Game.mainPanel.add(ending.endingTextBox);
+	        		 Game.mainPanel.add(ending.endingdiary);
+	        		 ending.endingTextBox.setText(ending.clearText);
 	        	 }
 	        	 //라이프 0이여도 엔딩화면으로
 	        	 if (Engine.Life == 0) {
 	        		 goToEnding();
-	        		 Game.mainPanel.add(ending.diary1);
+	        		 Game.mainPanel.add(ending.endingTextBox);
+	        		 Game.mainPanel.add(ending.endingdiary);
+	        		 ending.endingTextBox.setText(ending.gameOverText);
 	        	 }
 	        	 engine.EventNum++;
+	        	 dayBox.setText("DAY "+engine.EventNum); // 텍스트 박스에 들어갈 내용
 	        	 textBoxPage3.setText(engine.eventScript());
 	        	 select1Btn.setText(engine.select1Text());
 	        	 select2Btn.setText(engine.select2Text());
@@ -99,6 +95,7 @@ public class Page3 {
 		select1Btn.setHorizontalTextPosition(JButton.CENTER); 
 		select1Btn.setVerticalTextPosition(JButton.CENTER); 
 		select1Btn.setFont(myFont1);
+		
 		select1Btn.setText(engine.select1Text());
 		
 		select1Btn.addMouseListener(new MouseAdapter() {
@@ -133,6 +130,7 @@ public class Page3 {
 		select2Btn.setHorizontalTextPosition(JButton.CENTER); 
 		select2Btn.setVerticalTextPosition(JButton.CENTER); 
 		select2Btn.setFont(myFont1);
+		
 		select2Btn.setText(engine.select2Text());
 		
 		select2Btn.addMouseListener(new MouseAdapter() {
@@ -164,17 +162,32 @@ public class Page3 {
 	
 	public void page3ImgBox() {
 		imgBox.setVisible(true);
-		imgBox.setBounds(660, 30, 580, 400);
+		imgBox.setBounds(660, 30, 580, 390);
 	}
 	public void page3TextBox() {
 		 textBoxPage3.setVisible(true);
-		 textBoxPage3.setBounds(70,50,530,580);
+		 textBoxPage3.setBounds(70,0,530,580);
 		 textBoxPage3.setText(engine.eventScript()); // 텍스트 박스에 들어갈 내용
 		 textBoxPage3.setFont(myFont1); // 텍스트 폰트 변경
-		 
-		 // 텍스트 위치 조정
-		 textBoxPage3.setHorizontalTextPosition(JLabel.CENTER);
-		 textBoxPage3.setVerticalTextPosition(JLabel.CENTER);
+		 //textBoxPage3.setVerticalTextPosition(JLabel.TOP);
 	 }
 	
+	public void page3DayBox() {
+		dayBox.setVisible(true);
+		dayBox.setBounds(350,-25,200,200);
+		dayBox.setText("DAY "+engine.EventNum); // 텍스트 박스에 들어갈 내용
+		dayBox.setFont(new Font("고딕", Font.BOLD, 45)); // 텍스트 폰트 변경
+	 }
+	
+	public void goToEnding() {
+		 nextBtnPage3.setVisible(false);
+		 textBoxPage3.setVisible(false);
+		 diary.setVisible(false);
+		 imgBox.setVisible(false);
+		 select1Btn.setVisible(false);
+		 select2Btn.setVisible(false);
+		 dayBox.setVisible(false);
+		 Game.mainPanel.add(ending.nextBtnEnding);
+		 Game.mainPanel.pageBackground = endingBg;
+	}
 }

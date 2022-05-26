@@ -1,7 +1,7 @@
 package Game;
 
 public class Engine {
-	int EventNum = 1;
+	public static int EventNum = 1;
 	static int Life = 3;
 	
 	// http://mwultong.blogspot.com/2008/04/html-txt-to-html.html

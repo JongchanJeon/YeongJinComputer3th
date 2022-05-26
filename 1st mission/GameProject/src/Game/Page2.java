@@ -47,10 +47,12 @@ public class Page2 extends JPanel{
 	        	textBox.setVisible(false);
 	        	Game.mainPanel.add(page3.nextBtnPage3);
 	        	Game.mainPanel.add(page3.textBoxPage3);
+	        	Game.mainPanel.add(page3.dayBox);
 	        	Game.mainPanel.add(page3.diary);
 	        	Game.mainPanel.add(page3.imgBox);
 	        	Game.mainPanel.add(page3.select1Btn);
 	        	Game.mainPanel.add(page3.select2Btn);
+	        	
 	            Game.mainPanel.pageBackground = page3bg;
 	         }
 	      });
@@ -58,8 +60,7 @@ public class Page2 extends JPanel{
 	 
 	 // 텍스트박스
 	 public void page2Text() {
-		// 폰트 속성 추가 변수
-		 Font myFont1 = new Font("Serif", Font.BOLD, 18);
+		 Font myFont1 = new Font("나눔손글씨 강부장님체", Font.BOLD, 23);
 		 
 		 // html처럼 사용해서 줄바꿈, 중앙정렬 가능
 		 String test = "<html><body style='text-align:center;'>글자 잘나오는 지 테스트 중"
