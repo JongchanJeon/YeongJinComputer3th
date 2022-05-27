@@ -31,7 +31,7 @@ public class Ending {
 	
 	public void EndingTextBox() {
 		 endingTextBox.setVisible(true);
-		 endingTextBox.setBounds(365,70,550,500);
+		 endingTextBox.setBounds(365,70,550,450);
 		 endingTextBox.setFont(myFont1); // 텍스트 폰트 변경
 	 }
 	
@@ -72,23 +72,16 @@ public class Ending {
 		
 	}
 	
-	public static String clearText = "<html>오늘은 구조된 지 1년째 되는 날이다.<br>\r\n"
-			+ "오랜만에 일기를 다시 읽어보기 감회가 새롭다<br>\r\n"
+	public static String clearText = "<html>오늘은 구조된 지 1년째 되는 날이다. 오랜만에 일기를 다시 읽어보기 감회가 새롭다<br>\r\n"
 			+ "이미 다 아는 내용이지만 읽다 보니 힘들었던 장면이 자꾸 떠올라 읽기가 힘들었다<br>\r\n"
 			+ "내가 저런 상황에서 어떻게 저렇게 덤덤하게 버틴 건지 신기할 따름이다.<br>\r\n"
 			+ "<br>\r\n"
-			+ "예상보다 좀비의 수는 많지 않았고 나와 세상은 일상으로 거의 돌아왔다.<br>\r\n"
-			+ "여전히 간혹 좀비가 발견된다는 소문은 있지만 그냥 헛소문인 것 같다<br>\r\n"
-			+ "일상으로 돌아오지 않은 사람도 있다.<br>\r\n"
-			+ "아쉽게도 좀비로 변한지 시간이 지난 사람은 돌릴 수 없다고 한다<br>\r\n"
+			+ "예상보다 좀비의 수는 많지 않았고 나와 세상은 일상으로 거의 돌아왔다. 여전히 간혹 좀비가 발견된다는 소문은 있지만 그냥 헛소문인 것 같다<br>\r\n"
+			+ "일상으로 돌아오지 않은 사람도 있다. 아쉽게도 좀비로 변한지 시간이 지난 사람은 돌릴 수 없다고 한다<br>\r\n"
 			+ "사람들에겐 여전히 회색빛이 남아있었고 영영 돌아오지 않을 것 같다.<br></html>";
 	
-	public static String gameOverText =  "<html>다친 상처가 계속 부어오른다.<br>\r\n"
-			+ "너무 춥고 아프다. 머리까지 아프다.<br>\r\n"
-			+ "그래도 좀비가 되는 것은 아니라는게 다행이다<br>\r\n"
+	public static String gameOverText =  "<html>다친 상처가 계속 부어오른다. 너무 춥고 아프다. 머리까지 아프다<br>\r\n"
 			+ "내 마지막은 처절한 몸부림보다는 조용히 그리고 천천히 최후를 맞이하는 것으로 정했다<br>\r\n"
-			+ "<br>\r\n"
-			+ "일기를 쓸 힘이 없다.<br>\r\n"
-			+ "이게 끝인가 보다<br><br></html>";
+			+ "일기를 쓸 힘이 없다. 이게 끝인가 보다<br></html>";
 			
 }

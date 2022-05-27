@@ -52,10 +52,8 @@ public class Page1 {
            
            // 시작 버튼 누르면 page2 클래스에서 버튼, 텍스트박스 가져오기
            // Game.mainPanel.add(page2인스턴스.JButton이나 JLabel의 변수명)
-           Game.mainPanel.add(page2.text);
            Game.mainPanel.add(page2.textBox);
            Game.mainPanel.add(page2.nextBtn);
-           
            // 다음 페이지 배경 화면 변경 Game.mainPanel.pageBackground = 배경변수명;
            Game.mainPanel.pageBackground = page2Bg;
         }
