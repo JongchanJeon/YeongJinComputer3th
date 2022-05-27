@@ -23,7 +23,7 @@ public class JJC_Q1362 {
 			}else if (a == '#' && b == 0){
 				count += 1;
 				if (forRip == 1)
-					System.out.println("RIP");
+					System.out.println(count + " RIP");
 				else if(weight > minWeight && weight < maxWeight)
 					System.out.println(count +" :-)");
 				else
@@ -45,3 +45,9 @@ public class JJC_Q1362 {
 
 	}
 }
+/*
+20220531
+문제이해도: 1(1~5사이 숫자)
+문제 해결 : o
+코딩 시간 : 250분
+*/
