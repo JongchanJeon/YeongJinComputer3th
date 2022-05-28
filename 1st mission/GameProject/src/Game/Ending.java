@@ -10,7 +10,7 @@ public class Ending {
 	private ImageIcon nextButtonEnteredImage= new ImageIcon(Main.class.getResource("../images/nextButtonEntered.png"));
 	private ImageIcon nextButtonImage= new ImageIcon(Main.class.getResource("../images/nextButton.png"));
 	private Image realEndingBg = new ImageIcon(Main.class.getResource("../images/page3Bg.png")).getImage();
-	private Image creatorLogo = new ImageIcon(Main.class.getResource("../images/page3Bg.png")).getImage();
+	private Image creatorLogo = new ImageIcon(Main.class.getResource("../images/creatorLogo.png")).getImage();
 
 	JLabel endingdiary = new JLabel(diaryLabel);
 	JLabel nextText = new JLabel();
@@ -37,7 +37,7 @@ public class Ending {
 	 }
 	
 	public void EndingBtn() {
-		Creator creator = new Creator();
+//		Creator creator = new Creator();
 		
 		nextBtnEnding.setVisible(true);
 		nextBtnEnding.setBounds(1150,560,100,100);
@@ -63,9 +63,9 @@ public class Ending {
 	        	 endingTextBox.setVisible(false);
 	        	 nextText.setVisible(false);
 	        	 
-	        	 Game.mainPanel.add(creator.creatorText);
-	        	 Game.mainPanel.add(creator.creatorTextBox);
-
+//	        	 Game.mainPanel.add(creator.creatorText);
+//	        	 Game.mainPanel.add(creator.creatorOuttro);
+//	        	 Game.mainPanel.add(creator.creatorTextBox);
 	        	 Game.mainPanel.pageBackground = creatorLogo;
 	         }
 	      });
