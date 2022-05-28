@@ -36,6 +36,8 @@ public class Ending {
 	 }
 	
 	public void EndingBtn() {
+		Creator creator = new Creator();
+		
 		nextBtnEnding.setVisible(true);
 		nextBtnEnding.setBounds(1150,560,100,100);
 		nextBtnEnding.setBorderPainted(false); 
@@ -59,6 +61,10 @@ public class Ending {
 	        	 endingdiary.setVisible(false);
 	        	 endingTextBox.setVisible(false);
 	        	 nextText.setVisible(false);
+	        	 
+	        	 Game.mainPanel.add(creator.text);
+	        	 Game.mainPanel.add(creator.textbox);
+
 	        	 Game.mainPanel.pageBackground = realEndingBg;
 	         }
 	      });
