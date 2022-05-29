@@ -11,6 +11,10 @@ public class Ending {
 	private ImageIcon nextButtonImage= new ImageIcon(Main.class.getResource("../images/nextButton.png"));
 	private Image realEndingBg = new ImageIcon(Main.class.getResource("../images/page3Bg.png")).getImage();
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+	private Image creatorLogo = new ImageIcon(Main.class.getResource("../images/page3Bg.png")).getImage();
+>>>>>>> parent of 0fd5342 (만든이 틀 80%)
 =======
 	private Image creatorLogo = new ImageIcon(Main.class.getResource("../images/page3Bg.png")).getImage();
 >>>>>>> parent of 0fd5342 (만든이 틀 80%)
@@ -41,7 +45,10 @@ public class Ending {
 	
 	public void EndingBtn() {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 0fd5342 (만든이 틀 80%)
 		Creator creator = new Creator();
 		
 >>>>>>> parent of 0fd5342 (만든이 틀 80%)
