@@ -10,19 +10,7 @@ public class Ending {
 	private ImageIcon nextButtonEnteredImage= new ImageIcon(Main.class.getResource("../images/nextButtonEntered.png"));
 	private ImageIcon nextButtonImage= new ImageIcon(Main.class.getResource("../images/nextButton.png"));
 	private Image realEndingBg = new ImageIcon(Main.class.getResource("../images/page3Bg.png")).getImage();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 	private Image creatorLogo = new ImageIcon(Main.class.getResource("../images/page3Bg.png")).getImage();
->>>>>>> parent of 0fd5342 (만든이 틀 80%)
-=======
-	private Image creatorLogo = new ImageIcon(Main.class.getResource("../images/page3Bg.png")).getImage();
->>>>>>> parent of 0fd5342 (만든이 틀 80%)
-=======
-	private Image creatorLogo = new ImageIcon(Main.class.getResource("../images/page3Bg.png")).getImage();
->>>>>>> parent of 0fd5342 (만든이 틀 80%)
-
 	JLabel endingdiary = new JLabel(diaryLabel);
 	JLabel nextText = new JLabel();
 	JLabel endingTextBox = new JLabel();
@@ -48,17 +36,7 @@ public class Ending {
 	 }
 	
 	public void EndingBtn() {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> parent of 0fd5342 (만든이 틀 80%)
-=======
->>>>>>> parent of 0fd5342 (만든이 틀 80%)
 		Creator creator = new Creator();
-		
->>>>>>> parent of 0fd5342 (만든이 틀 80%)
 		nextBtnEnding.setVisible(true);
 		nextBtnEnding.setBounds(1150,560,100,100);
 		nextBtnEnding.setBorderPainted(false); 
@@ -82,15 +60,10 @@ public class Ending {
 	        	 endingdiary.setVisible(false);
 	        	 endingTextBox.setVisible(false);
 	        	 nextText.setVisible(false);
-<<<<<<< HEAD
-	        	 Game.mainPanel.pageBackground = realEndingBg;
-=======
-	        	 
+	        	 Game.mainPanel.pageBackground = realEndingBg;  	 
 	        	 Game.mainPanel.add(creator.creatorText);
 	        	 Game.mainPanel.add(creator.creatorTextBox);
-
 	        	 Game.mainPanel.pageBackground = creatorLogo;
->>>>>>> parent of 0fd5342 (만든이 틀 80%)
 	         }
 	      });
 		
