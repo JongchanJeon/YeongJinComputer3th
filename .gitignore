@@ -1,3 +1,7 @@
 
 *.log
 1st mission/GameProject/.metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log
+1st mission/GameProject/.metadata/.log
+*.index
+*.class
+*.ini
