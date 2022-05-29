@@ -1,27 +1,16 @@
 package Game;
 
-import java.awt.*;
-import javax.swing.*;
+import java.awt.Image;
+
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 
 
 public class Creator {
-	private ImageIcon textBoxImage = new ImageIcon(Main.class.getResource("../images/textBox.png"));
 
-	JLabel creatorTextBox = new JLabel(textBoxImage);
-	JLabel creatorText = new JLabel();
-	
-	Creator() {
-		// creatorTextBox 설정해주는 메소드를 실행
-		CreatorTextBox();
-		
-		// creatorText 설정해주는 메소드를 실행
-		
-	}
-	
-	public void CreatorTextBox() {
-		// creatorTextBox 설정해주는 메소드를 실행
-		creatorTextBox.setVisible(true);
-		creatorTextBox.setBounds(300,100,700,500);
-	}
+	private ImageIcon creatorLogo = new ImageIcon(Main.class.getResource("../images/creatorLogo.png"));
+
+	JLabel textbox = new JLabel();
+	JLabel text = new JLabel();
 	
 }
