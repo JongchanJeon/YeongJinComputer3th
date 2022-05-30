@@ -194,6 +194,8 @@ public class Page3 {
 	
 	
 	public void goToEnding() {
+		 Sound.clip.stop();	// ¿Ã¿¸¿« ¿Ωæ« ∏ÿ√„
+		 new Sound("ENDING");	// ENDING ¿Ωæ« Ω√¿€
 		 nextBtnPage3.setVisible(false);
 		 textBoxPage3.setVisible(false);
 		 diary.setVisible(false);
