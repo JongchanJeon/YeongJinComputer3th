@@ -17,15 +17,17 @@ public class Page3 {
 	private ImageIcon Life2Bg = new ImageIcon(Main.class.getResource("../images/twoLifeDiary.png"));
 	private ImageIcon Life1Bg = new ImageIcon(Main.class.getResource("../images/oneLifeDiary.png"));
 	private ImageIcon Life0Bg = new ImageIcon(Main.class.getResource("../images/zeroLifeDiary.png"));
-	private ImageIcon ImgBoxTest2 = new ImageIcon(Main.class.getResource("../images/ImgBoxTest2.png"));
-	private ImageIcon ImgBoxTest4 = new ImageIcon(Main.class.getResource("../images/ImgBoxTest4.png"));
-	 
+	
+	private ImageIcon dayOneImg = new ImageIcon(Main.class.getResource("../images/dayOneImg.png"));
+	private ImageIcon dayTwoImg = new ImageIcon(Main.class.getResource("../images/dayTwoImg.png"));
+	
+	
 	JButton select1Btn = new JButton(selectBtnImage);
 	JButton select2Btn = new JButton(selectBtnImage);
 	JButton nextBtnPage3 = new JButton(nextButtonImage);
 
 	JLabel diary = new JLabel(Life3Bg);
-	JLabel imgBox = new JLabel(imgBoxLabel);
+	JLabel imgBox = new JLabel(dayOneImg);
 	JLabel dayBox = new JLabel();
 	JLabel textBoxPage3 = new JLabel();
 	Engine engine = new Engine();
@@ -200,13 +202,14 @@ public class Page3 {
 		 Game.mainPanel.pageBackground = endingBg;
 	}
 	public void lifeChecker() {
-		if (Engine.Life == 3) { diary.setIcon(Life3Bg); }
-		else if (Engine.Life == 2) { diary.setIcon(Life2Bg); }
-		else if (Engine.Life == 1) { diary.setIcon(Life1Bg); }
-		else if (Engine.Life == 0) { diary.setIcon(Life0Bg); }
+		if (Engine.Life == 3)  diary.setIcon(Life3Bg); 
+		else if (Engine.Life == 2) diary.setIcon(Life2Bg); 
+		else if (Engine.Life == 1) diary.setIcon(Life1Bg);
+		else if (Engine.Life == 0) diary.setIcon(Life0Bg); 
 	}	
+	
 	public void imageChanger() {
-		if (Engine.EventNum == 2) { imgBox.setIcon(ImgBoxTest2); }
-		else if (Engine.EventNum == 4) { imgBox.setIcon(ImgBoxTest4); }
+		if (Engine.EventNum == 1) imgBox.setIcon(dayOneImg); 
+		else if (Engine.EventNum == 2) imgBox.setIcon(dayTwoImg); 
 	}
 }
