@@ -20,7 +20,6 @@ public class Main {
 		Game() {
 			//다음장면에 쓸 page1 인스턴스 생성
 			Page1 page1 = new Page1();
-			new Sound();
 			// 프레임 설정   
 			setTitle("2 Weeks");
 			setSize(Main.SCREEN_WIDTH, Main.SCREEN_HEIGHT);

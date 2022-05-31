@@ -20,6 +20,9 @@ public class Page3 {
 	
 	private ImageIcon dayOneImg = new ImageIcon(Main.class.getResource("../images/dayOneImg.png"));
 	private ImageIcon dayTwoImg = new ImageIcon(Main.class.getResource("../images/dayTwoImg.png"));
+	private ImageIcon daySixImg = new ImageIcon(Main.class.getResource("../images/daySixImg.png"));
+	private ImageIcon daySevenImg = new ImageIcon(Main.class.getResource("../images/daySevenImg.png"));
+	private ImageIcon dayEightImg = new ImageIcon(Main.class.getResource("../images/dayEightImg.png"));
 	
 	
 	JButton select1Btn = new JButton(selectBtnImage);
@@ -191,6 +194,8 @@ public class Page3 {
 	
 	
 	public void goToEnding() {
+		 Sound.clip.stop();	// ¿Ã¿¸¿« ¿Ωæ« ∏ÿ√„
+		 new Sound("ENDING");	// ENDING ¿Ωæ« Ω√¿€
 		 nextBtnPage3.setVisible(false);
 		 textBoxPage3.setVisible(false);
 		 diary.setVisible(false);
@@ -211,5 +216,8 @@ public class Page3 {
 	public void imageChanger() {
 		if (Engine.EventNum == 1) imgBox.setIcon(dayOneImg); 
 		else if (Engine.EventNum == 2) imgBox.setIcon(dayTwoImg); 
+		else if (Engine.EventNum == 6) imgBox.setIcon(daySixImg); 
+		else if (Engine.EventNum == 7) imgBox.setIcon(daySevenImg); 
+		else if (Engine.EventNum == 8) imgBox.setIcon(dayEightImg); 
 	}
 }
