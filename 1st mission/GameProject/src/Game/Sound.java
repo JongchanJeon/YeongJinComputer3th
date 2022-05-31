@@ -16,7 +16,7 @@ public class Sound {
 		
 				// 음량조정
 				gainControl.setValue(-30.0f);
-		
+				clip.loop(Clip.LOOP_CONTINUOUSLY);	// 창을 닫을 때 까지 반복
 				clip.start();
 		
 		
@@ -34,7 +34,7 @@ public class Sound {
 				
 				// 음량조정
 				gainControl.setValue(-30.0f);
-				
+				clip.loop(Clip.LOOP_CONTINUOUSLY);	// 창을 닫을 때 까지 반복
 				clip.start();
 				
 				
@@ -52,7 +52,7 @@ public class Sound {
 				
 				// 음량조정
 				gainControl.setValue(-30.0f);
-				
+				clip.loop(Clip.LOOP_CONTINUOUSLY);	// 창을 닫을 때 까지 반복
 				clip.start();
 				
 				
@@ -70,7 +70,7 @@ public class Sound {
 				
 				// 음량조정
 				gainControl.setValue(-30.0f);
-				
+				clip.loop(Clip.LOOP_CONTINUOUSLY);	// 창을 닫을 때 까지 반복
 				clip.start();
 				
 				
