@@ -27,6 +27,10 @@ public class Page3 {
 	private ImageIcon daySevenImg = new ImageIcon(Main.class.getResource("../images/daySevenImg.png"));
 	private ImageIcon dayEightImg = new ImageIcon(Main.class.getResource("../images/dayEightImg.png"));
 	
+	private ImageIcon dayTwelveImg = new ImageIcon(Main.class.getResource("../images/dayTwelveImg.png"));
+	private ImageIcon dayThirteenImg = new ImageIcon(Main.class.getResource("../images/dayThirteenImg.png"));
+	private ImageIcon dayFourteenImg = new ImageIcon(Main.class.getResource("../images/dayFourteenImg.png"));
+	
 	JButton select1Btn = new JButton(selectBtnImage);
 	JButton select2Btn = new JButton(selectBtnImage);
 	JButton nextBtnPage3 = new JButton(nextButtonImage);
@@ -230,6 +234,10 @@ public class Page3 {
 		else if (Engine.EventNum == 6) imgBox.setIcon(daySixImg); 
 		else if (Engine.EventNum == 7) imgBox.setIcon(daySevenImg); 
 		else if (Engine.EventNum == 8) imgBox.setIcon(dayEightImg);
+		
+		else if (Engine.EventNum == 12) imgBox.setIcon(dayTwelveImg);
+		else if (Engine.EventNum == 13) imgBox.setIcon(dayThirteenImg);
+		else if (Engine.EventNum == 14) imgBox.setIcon(dayFourteenImg);
 		
 	}
 }
