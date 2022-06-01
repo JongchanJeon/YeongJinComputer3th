@@ -6,7 +6,7 @@ import javax.swing.*;
 
 public class Ending {
 	
-	private ImageIcon diaryLabel = new ImageIcon(Main.class.getResource("../images/diaryImgTest.png"));
+	private ImageIcon diaryLabel = new ImageIcon(Main.class.getResource("../images/endingDiary.png"));
 	private ImageIcon nextButtonEnteredImage= new ImageIcon(Main.class.getResource("../images/nextButtonEntered.png"));
 	private ImageIcon nextButtonImage= new ImageIcon(Main.class.getResource("../images/nextButton.png"));
 	
@@ -81,15 +81,16 @@ public class Ending {
 	}
 	
 	public static String clearText = "<html>오늘은 구조된 지 1년째 되는 날이다.<br>\r\n"
-			+ "오랜만에 일기를 다시 읽어보기 감회가 새롭다<br>\r\n"
-			+ "이미 다 아는 내용이지만 읽다 보니 힘들었던 장면이 자꾸 떠올라 읽기가 힘들었다<br>\r\n"
+			+ "오랜만에 일기를 다시 읽어보니 감회가 새롭다.<br>\r\n"
+			+ "다시 읽어 보니 힘들었던 장면이 자꾸 떠올라 읽기가 힘들었다.<br>\r\n"
 			+ "내가 저런 상황에서 어떻게 저렇게 덤덤하게 버틴 건지 신기할 따름이다.<br>\r\n"
 			+ "<br>\r\n"
-			+ "예상보다 좀비의 수는 많지 않았고 나와 세상은 일상으로 거의 돌아왔다.<br>\r\n"
-			+ "여전히 간혹 좀비가 발견된다는 소문은 있지만 그냥 헛소문인 것 같다<br>\r\n"
+			+ "예상보다 좀비의 수는 많지 않았고 세상은 일상으로 돌아왔다.<br>\r\n"
+			+ "여전히 간혹 좀비가 발견된다는 소문은 있지만 헛소문인 것 같다.<br>\r\n"
 			+ "일상으로 돌아오지 않은 사람도 있다.<br>\r\n"
-			+ "아쉽게도 좀비로 변한지 시간이 지난 사람은 돌릴 수 없다고 한다<br>\r\n"
-			+ "사람들에겐 여전히 회색빛이 남아있었고 영영 돌아오지 않을 것 같다.<br></html>";
+			+ "아쉽게도 좀비로 변한 사람은 돌릴 수 없다고 한다.<br>\r\n"
+			+ "사람들에겐 여전히 회색빛이 남아있었고,<br>"
+			+ "영영 돌아오지 않을 것 같다.<br></html>";
 	
 	public static String gameOverText =  "<html>다친 상처가 계속 부어오른다.<br>\r\n"
 			+ "너무 춥고 아프다. 머리까지 아프다.<br>\r\n"
