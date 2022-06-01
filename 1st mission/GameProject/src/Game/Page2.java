@@ -55,6 +55,7 @@ public class Page2 extends JPanel{
 	        	Game.mainPanel.add(page3.select1Btn);
 	        	Game.mainPanel.add(page3.select2Btn);
 	            Game.mainPanel.pageBackground = page3bg;
+	            Sound.clip.stop();
 	            new Sound("GAMING");
 	         }
 	      });
