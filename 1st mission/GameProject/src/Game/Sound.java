@@ -7,7 +7,7 @@ public class Sound {
 	public Sound(String a) {
 		if (a == "START") {	//Ω√¿€ ¿Ωæ«
 			try {
-				AudioInputStream ais = AudioSystem.getAudioInputStream(new File("sound/START.wav"));
+				AudioInputStream ais = AudioSystem.getAudioInputStream(new File("sound/Ragnarok Online 2 OST Intro Theme.wav"));
 				clip = AudioSystem.getClip();
 				clip.open(ais);
 		
