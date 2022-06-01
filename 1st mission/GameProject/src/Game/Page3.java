@@ -37,7 +37,7 @@ public class Page3 {
 	JLabel textBoxPage3 = new JLabel();
 	Engine engine = new Engine();
 	Ending ending = new Ending();
-	public static Font myFont1 = new Font("³ª´®¼Õ±Û¾¾ °­ºÎÀå´ÔÃ¼", Font.BOLD, 26);
+	public static Font myFont1 = new Font("ë‚˜ëˆ”ì†ê¸€ì”¨ ê°•ë¶€ì¥ë‹˜ì²´", Font.BOLD, 26);
 	 
 	
 	Page3(){
@@ -70,13 +70,13 @@ public class Page3 {
 	         }
 	         @Override
 	         public void mousePressed(MouseEvent e) {
-	        	 //14ÀÏÂ÷¿£ ¼±ÅÃÁö ¾øÀÌ ³Ø½ºÆ® ¹öÆ°¸¸ ³ª¿À°Ô
+	        	 //14ì¼ì°¨ì—” ì„ íƒì§€ ì—†ì´ ë„¥ìŠ¤íŠ¸ ë²„íŠ¼ë§Œ ë‚˜ì˜¤ê²Œ
 	        	 if (Engine.EventNum < 13) {
 	        		 nextBtnPage3.setVisible(false);
 	        		 select2Btn.setVisible(true);
 	        		 select1Btn.setVisible(true);
 	        	 }
-	        	 //14ÀÏÂ÷¿¡ ³Ø½ºÆ® ¹öÆ° ´©¸£¸é ¿£µùÈ­¸éÀ¸·Î 
+	        	 //14ì¼ì°¨ì— ë„¥ìŠ¤íŠ¸ ë²„íŠ¼ ëˆ„ë¥´ë©´ ì—”ë”©í™”ë©´ìœ¼ë¡œ 
 	        	 if (Engine.EventNum == 14) {
 	        		 Game.mainPanel.pageBackground = successEndingimg;
 	        		 goToEnding();
@@ -86,7 +86,7 @@ public class Page3 {
 	        		 ending.endingTextBox.setText(ending.clearText);
 	        		 new Sound("VICTORY");
 	        	 }
-	        	 //¶óÀÌÇÁ 0ÀÌ¿©µµ ¿£µùÈ­¸éÀ¸·Î
+	        	 //ë¼ì´í”„ 0ì´ì—¬ë„ ì—”ë”©í™”ë©´ìœ¼ë¡œ
 	        	 if (Engine.Life == 0) {
 	        		 goToEnding();
 	        		 Game.mainPanel.add(ending.endingTextBox);
@@ -95,7 +95,7 @@ public class Page3 {
 	        		 new Sound("FAIL");
 	        	 }
 	        	 Engine.EventNum++;
-	        	 dayBox.setText("DAY "+Engine.EventNum); // ÅØ½ºÆ® ¹Ú½º¿¡ µé¾î°¥ ³»¿ë
+	        	 dayBox.setText("DAY "+Engine.EventNum); // í…ìŠ¤íŠ¸ ë°•ìŠ¤ì— ë“¤ì–´ê°ˆ ë‚´ìš©
 	        	 textBoxPage3.setText(engine.eventScript());
 	        	 select1Btn.setText(engine.select1Text());
 	        	 select2Btn.setText(engine.select2Text());
@@ -186,22 +186,22 @@ public class Page3 {
 	public void page3TextBox() {
 		 textBoxPage3.setVisible(true);
 		 textBoxPage3.setBounds(70,0,530,720);
-		 textBoxPage3.setText(engine.eventScript()); // ÅØ½ºÆ® ¹Ú½º¿¡ µé¾î°¥ ³»¿ë
-		 textBoxPage3.setFont(myFont1); // ÅØ½ºÆ® ÆùÆ® º¯°æ
-		 // textBoxPage3.setVerticalTextPosition(JLabel.TOP); ÀÌ°Å ¿Ö ÀÛµ¿ ¾ÈÇØ¿ä?
+		 textBoxPage3.setText(engine.eventScript()); // í…ìŠ¤íŠ¸ ë°•ìŠ¤ì— ë“¤ì–´ê°ˆ ë‚´ìš©
+		 textBoxPage3.setFont(myFont1); // í…ìŠ¤íŠ¸ í°íŠ¸ ë³€ê²½
+		 // textBoxPage3.setVerticalTextPosition(JLabel.TOP); ì´ê±° ì™œ ì‘ë™ ì•ˆí•´ìš”?
 	 }
 	
 	public void page3DayBox() {
 		dayBox.setVisible(true);
 		dayBox.setBounds(350,-25,200,200);
-		dayBox.setText("DAY "+Engine.EventNum); // ÅØ½ºÆ® ¹Ú½º¿¡ µé¾î°¥ ³»¿ë
-		dayBox.setFont(new Font("°íµñ", Font.BOLD, 45)); // ÅØ½ºÆ® ÆùÆ® º¯°æ
+		dayBox.setText("DAY "+Engine.EventNum); // í…ìŠ¤íŠ¸ ë°•ìŠ¤ì— ë“¤ì–´ê°ˆ ë‚´ìš©
+		dayBox.setFont(new Font("ê³ ë”•", Font.BOLD, 45)); // í…ìŠ¤íŠ¸ í°íŠ¸ ë³€ê²½
 	 }
 	
 	
 	public void goToEnding() {
-		 Sound.clip.stop();	// ÀÌÀüÀÇ À½¾Ç ¸ØÃã
-		 // new Sound("ENDING");	// ENDING À½¾Ç ½ÃÀÛ
+		 Sound.clip.stop();	// ì´ì „ì˜ ìŒì•… ë©ˆì¶¤
+		 // new Sound("ENDING");	// ENDING ìŒì•… ì‹œì‘
 		 nextBtnPage3.setVisible(false);
 		 textBoxPage3.setVisible(false);
 		 diary.setVisible(false);
