@@ -198,8 +198,13 @@ public class Page3 {
 	
 	
 	public void goToEnding() {
-		 Sound.clip.stop();	// ¿Ã¿¸¿« ¿Ωæ« ∏ÿ√„
-		 new Sound("ENDING");	// ENDING ¿Ωæ« Ω√¿€
+		 if (Engine.EventNum == 14) {
+			 Sound.clip.stop();	// ¿Ã¿¸¿« ¿Ωæ« ∏ÿ√„
+			 new Sound("VICTORY");	// ENDING ¿Ωæ« Ω√¿€
+		 }else {
+			 Sound.clip.stop();
+			 new Sound("FAIL");
+		 }
 		 nextBtnPage3.setVisible(false);
 		 textBoxPage3.setVisible(false);
 		 diary.setVisible(false);
