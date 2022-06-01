@@ -15,7 +15,7 @@ public class Sound {
 				FloatControl gainControl = (FloatControl) clip.getControl(FloatControl.Type.MASTER_GAIN);
 		
 				// 음량조정
-				gainControl.setValue(-30.0f);
+				gainControl.setValue(-0.0f);
 				clip.loop(Clip.LOOP_CONTINUOUSLY);	// 창을 닫을 때 까지 반복
 				clip.start();
 		
@@ -23,9 +23,9 @@ public class Sound {
 			} catch(Exception e) {
 				e.printStackTrace();
 			}
-		}else if (a == "VICTORY") { // 생존 성공 음악
+		}else if (a == "GAMING") { // 생존 성공 음악
 			try {
-				AudioInputStream ais = AudioSystem.getAudioInputStream(new File("sound/Victory.wav"));
+				AudioInputStream ais = AudioSystem.getAudioInputStream(new File("sound/Hands Be Still.wav"));
 				clip = AudioSystem.getClip();
 				clip.open(ais);
 				
@@ -33,7 +33,26 @@ public class Sound {
 				FloatControl gainControl = (FloatControl) clip.getControl(FloatControl.Type.MASTER_GAIN);
 				
 				// 음량조정
-				gainControl.setValue(-30.0f);
+				gainControl.setValue(-0.0f);
+				clip.loop(Clip.LOOP_CONTINUOUSLY);	// 창을 닫을 때 까지 반복
+				clip.start();
+				
+				
+			} catch(Exception e) {
+				e.printStackTrace();
+			}
+		}
+		else if (a == "VICTORY") { // 생존 성공 음악
+			try {
+				AudioInputStream ais = AudioSystem.getAudioInputStream(new File("sound/Fragment.wav"));
+				clip = AudioSystem.getClip();
+				clip.open(ais);
+				
+				// 소리조정
+				FloatControl gainControl = (FloatControl) clip.getControl(FloatControl.Type.MASTER_GAIN);
+				
+				// 음량조정
+				gainControl.setValue(-0.0f);
 				clip.loop(Clip.LOOP_CONTINUOUSLY);	// 창을 닫을 때 까지 반복
 				clip.start();
 				
@@ -43,7 +62,7 @@ public class Sound {
 			}
 		}else if (a == "FAIL") { // 생존 실패 음악
 			try {
-				AudioInputStream ais = AudioSystem.getAudioInputStream(new File("sound/FAIL.wav"));
+				AudioInputStream ais = AudioSystem.getAudioInputStream(new File("sound/Daylight.wav"));
 				clip = AudioSystem.getClip();
 				clip.open(ais);
 				
@@ -51,7 +70,7 @@ public class Sound {
 				FloatControl gainControl = (FloatControl) clip.getControl(FloatControl.Type.MASTER_GAIN);
 				
 				// 음량조정
-				gainControl.setValue(-30.0f);
+				gainControl.setValue(-0.0f);
 				clip.loop(Clip.LOOP_CONTINUOUSLY);	// 창을 닫을 때 까지 반복
 				clip.start();
 				
@@ -61,7 +80,7 @@ public class Sound {
 			}
 		}else if (a == "ENDING") { // 엔딩 음악
 			try {
-				AudioInputStream ais = AudioSystem.getAudioInputStream(new File("sound/ENDING.wav"));
+				AudioInputStream ais = AudioSystem.getAudioInputStream(new File("sound/Staycation.wav"));
 				clip = AudioSystem.getClip();
 				clip.open(ais);
 				
@@ -69,7 +88,7 @@ public class Sound {
 				FloatControl gainControl = (FloatControl) clip.getControl(FloatControl.Type.MASTER_GAIN);
 				
 				// 음량조정
-				gainControl.setValue(-30.0f);
+				gainControl.setValue(-0.0f);
 				clip.loop(Clip.LOOP_CONTINUOUSLY);	// 창을 닫을 때 까지 반복
 				clip.start();
 				

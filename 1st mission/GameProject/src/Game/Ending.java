@@ -23,6 +23,7 @@ public class Ending {
 		EndingBtn();
 		EndingDiary();
 		EndingTextBox();
+	
 	}
 	
 	public void EndingDiary() {
@@ -62,7 +63,8 @@ public class Ending {
 	        	 endingdiary.setVisible(false);
 	        	 endingTextBox.setVisible(false);
 	        	 nextText.setVisible(false);
-	        	 
+	        	 Sound.clip.stop();  // 이전 음악 정지
+	     		 new Sound("ENDING"); //ENDING 음악 재생
 //	        	 Game.mainPanel.add(creator.creatorText);
 //	        	 Game.mainPanel.add(creator.creatorOuttro);
 //	        	 Game.mainPanel.add(creator.creatorTextBox);
