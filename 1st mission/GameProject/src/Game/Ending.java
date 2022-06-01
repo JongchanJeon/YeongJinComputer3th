@@ -9,7 +9,7 @@ public class Ending {
 	private ImageIcon diaryLabel = new ImageIcon(Main.class.getResource("../images/diaryImgTest.png"));
 	private ImageIcon nextButtonEnteredImage= new ImageIcon(Main.class.getResource("../images/nextButtonEntered.png"));
 	private ImageIcon nextButtonImage= new ImageIcon(Main.class.getResource("../images/nextButton.png"));
-	private Image realEndingBg = new ImageIcon(Main.class.getResource("../images/page3Bg.png")).getImage();
+	
 	private Image creatorLogo = new ImageIcon(Main.class.getResource("../images/creatorLogo.png")).getImage();
 
 	JLabel endingdiary = new JLabel(diaryLabel);
@@ -74,6 +74,7 @@ public class Ending {
 		 nextText.setBounds(950,560,600,100);
 		 nextText.setFont(myFont1);
 		 nextText.setText("다음 버튼을 눌러주세요");
+		 nextText.setForeground(Color.white);
 		 nextText.setHorizontalTextPosition(JLabel.CENTER);
 		 nextText.setVerticalTextPosition(JLabel.CENTER);
 		

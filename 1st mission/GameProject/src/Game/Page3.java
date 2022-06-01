@@ -12,7 +12,7 @@ public class Page3 {
 	private ImageIcon nextButtonImage= new ImageIcon(Main.class.getResource("../images/nextButton.png"));
 	private ImageIcon selectBtnImage = new ImageIcon(Main.class.getResource("../images/selectBtnBasic.png"));
 	private ImageIcon selectBtnEnteredImage = new ImageIcon(Main.class.getResource("../images/selectBtnEntered.png"));
-	private Image endingBg = new ImageIcon(Main.class.getResource("../images/aisleBackground.png")).getImage();
+	private Image successEndingimg = new ImageIcon(Main.class.getResource("../images/successEndingimg.jpg")).getImage();
 	private ImageIcon Life3Bg = new ImageIcon(Main.class.getResource("../images/threeLifeDiary.png"));
 	private ImageIcon Life2Bg = new ImageIcon(Main.class.getResource("../images/twoLifeDiary.png"));
 	private ImageIcon Life1Bg = new ImageIcon(Main.class.getResource("../images/oneLifeDiary.png"));
@@ -78,7 +78,9 @@ public class Page3 {
 	        	 }
 	        	 //14일차에 넥스트 버튼 누르면 엔딩화면으로 
 	        	 if (Engine.EventNum == 14) {
+	        		 Game.mainPanel.pageBackground = successEndingimg;
 	        		 goToEnding();
+	        		 Game.mainPanel.add(ending.nextText);
 	        		 Game.mainPanel.add(ending.endingTextBox);
 	        		 Game.mainPanel.add(ending.endingdiary);
 	        		 ending.endingTextBox.setText(ending.clearText);
@@ -206,7 +208,6 @@ public class Page3 {
 		 select2Btn.setVisible(false);
 		 dayBox.setVisible(false);
 		 Game.mainPanel.add(ending.nextBtnEnding);
-		 Game.mainPanel.pageBackground = endingBg;
 	}
 	public void lifeChecker() {
 		if (Engine.Life == 3)  diary.setIcon(Life3Bg); 
