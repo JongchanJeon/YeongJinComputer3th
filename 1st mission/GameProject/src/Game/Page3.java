@@ -13,6 +13,8 @@ public class Page3 {
 	private ImageIcon selectBtnImage = new ImageIcon(Main.class.getResource("../images/selectBtnBasic.png"));
 	private ImageIcon selectBtnEnteredImage = new ImageIcon(Main.class.getResource("../images/selectBtnEntered.png"));
 	private Image successEndingimg = new ImageIcon(Main.class.getResource("../images/successEndingimg.jpg")).getImage();
+	private Image failEndingimg = new ImageIcon(Main.class.getResource("../images/failEndingImg.jpg")).getImage();
+	
 	private ImageIcon Life3Bg = new ImageIcon(Main.class.getResource("../images/threeLifeDiary.png"));
 	private ImageIcon Life2Bg = new ImageIcon(Main.class.getResource("../images/twoLifeDiary.png"));
 	private ImageIcon Life1Bg = new ImageIcon(Main.class.getResource("../images/oneLifeDiary.png"));
@@ -93,7 +95,9 @@ public class Page3 {
 	        	 }
 	        	 //라이프 0이여도 엔딩화면으로
 	        	 if (Engine.Life == 0) {
+	        		 Game.mainPanel.pageBackground = failEndingimg;
 	        		 goToEnding();
+	        		 Game.mainPanel.add(ending.nextText);
 	        		 Game.mainPanel.add(ending.endingTextBox);
 	        		 Game.mainPanel.add(ending.endingdiary);
 	        		 ending.endingTextBox.setText(ending.gameOverText);
