@@ -18,11 +18,11 @@ public class Page2 extends JPanel{
 	 Page2(){
 		 page2Btn();
 		 page2Text();
+		 
 	 }
 	 
 	//다음 버튼
 	 public void page2Btn() {
-		 
 		 Page3 page3 = new Page3();
 		 
 		 nextBtn.setVisible(true);
@@ -56,6 +56,8 @@ public class Page2 extends JPanel{
 	        	Game.mainPanel.add(page3.select2Btn);
 	        	
 	            Game.mainPanel.pageBackground = page3bg;
+	            
+	            new Sound("START"); //시작 음악 재생
 	         }
 	      });
 	 }

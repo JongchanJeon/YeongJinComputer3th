@@ -7,7 +7,7 @@ public class Sound {
 	public Sound(String a) {
 		if (a == "START") {	//½ÃÀÛ À½¾Ç
 			try {
-				AudioInputStream ais = AudioSystem.getAudioInputStream(new File("sound/START.wav"));
+				AudioInputStream ais = AudioSystem.getAudioInputStream(new File("sound/Hands Be Still.wav"));
 				clip = AudioSystem.getClip();
 				clip.open(ais);
 		
@@ -25,7 +25,7 @@ public class Sound {
 			}
 		}else if (a == "VICTORY") { // »ýÁ¸ ¼º°ø À½¾Ç
 			try {
-				AudioInputStream ais = AudioSystem.getAudioInputStream(new File("sound/Victory.wav"));
+				AudioInputStream ais = AudioSystem.getAudioInputStream(new File("sound/Fragment.wav"));
 				clip = AudioSystem.getClip();
 				clip.open(ais);
 				
@@ -43,7 +43,7 @@ public class Sound {
 			}
 		}else if (a == "FAIL") { // »ýÁ¸ ½ÇÆÐ À½¾Ç
 			try {
-				AudioInputStream ais = AudioSystem.getAudioInputStream(new File("sound/FAIL.wav"));
+				AudioInputStream ais = AudioSystem.getAudioInputStream(new File("sound/Daylight.wav"));
 				clip = AudioSystem.getClip();
 				clip.open(ais);
 				
@@ -61,7 +61,7 @@ public class Sound {
 			}
 		}else if (a == "ENDING") { // ¿£µù À½¾Ç
 			try {
-				AudioInputStream ais = AudioSystem.getAudioInputStream(new File("sound/ENDING.wav"));
+				AudioInputStream ais = AudioSystem.getAudioInputStream(new File("sound/Staycation.wav"));
 				clip = AudioSystem.getClip();
 				clip.open(ais);
 				

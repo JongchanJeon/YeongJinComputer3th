@@ -84,6 +84,7 @@ public class Page3 {
 	        		 Game.mainPanel.add(ending.endingTextBox);
 	        		 Game.mainPanel.add(ending.endingdiary);
 	        		 ending.endingTextBox.setText(ending.clearText);
+	        		 new Sound("VICTORY");
 	        	 }
 	        	 //라이프 0이여도 엔딩화면으로
 	        	 if (Engine.Life == 0) {
@@ -91,6 +92,7 @@ public class Page3 {
 	        		 Game.mainPanel.add(ending.endingTextBox);
 	        		 Game.mainPanel.add(ending.endingdiary);
 	        		 ending.endingTextBox.setText(ending.gameOverText);
+	        		 new Sound("FAIL");
 	        	 }
 	        	 Engine.EventNum++;
 	        	 dayBox.setText("DAY "+Engine.EventNum); // 텍스트 박스에 들어갈 내용
@@ -199,7 +201,7 @@ public class Page3 {
 	
 	public void goToEnding() {
 		 Sound.clip.stop();	// 이전의 음악 멈춤
-		 new Sound("ENDING");	// ENDING 음악 시작
+		 // new Sound("ENDING");	// ENDING 음악 시작
 		 nextBtnPage3.setVisible(false);
 		 textBoxPage3.setVisible(false);
 		 diary.setVisible(false);

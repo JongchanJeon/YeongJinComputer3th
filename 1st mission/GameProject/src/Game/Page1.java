@@ -18,7 +18,7 @@ public class Page1 {
    
    Page1(){
 	   page1Btn();
-	   new Sound("START"); //시작 음악 재생
+	   // new Sound("START"); //시작 음악 재생
    }
    
    public void page1Btn() {

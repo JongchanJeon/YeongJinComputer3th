@@ -67,6 +67,8 @@ public class Ending {
 //	        	 Game.mainPanel.add(creator.creatorOuttro);
 //	        	 Game.mainPanel.add(creator.creatorTextBox);
 	        	 Game.mainPanel.pageBackground = creatorLogo;
+	        	 Sound.clip.stop();
+	        	 new Sound("ENDING");
 	         }
 	      });
 		
