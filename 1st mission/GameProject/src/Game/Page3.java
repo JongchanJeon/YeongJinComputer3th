@@ -26,6 +26,8 @@ public class Page3 {
 	private ImageIcon daySixImg = new ImageIcon(Main.class.getResource("../images/daySixImg.png"));
 	private ImageIcon daySevenImg = new ImageIcon(Main.class.getResource("../images/daySevenImg.png"));
 	private ImageIcon dayEightImg = new ImageIcon(Main.class.getResource("../images/dayEightImg.png"));
+	private ImageIcon dayTenImg = new ImageIcon(Main.class.getResource("../images/dayTenImg.png"));
+	private ImageIcon dayElevenImg = new ImageIcon(Main.class.getResource("../images/dayElevenImg.png"));
 	
 	private ImageIcon dayTwelveImg = new ImageIcon(Main.class.getResource("../images/dayTwelveImg.png"));
 	private ImageIcon dayThirteenImg = new ImageIcon(Main.class.getResource("../images/dayThirteenImg.png"));
@@ -234,7 +236,9 @@ public class Page3 {
 		else if (Engine.EventNum == 6) imgBox.setIcon(daySixImg); 
 		else if (Engine.EventNum == 7) imgBox.setIcon(daySevenImg); 
 		else if (Engine.EventNum == 8) imgBox.setIcon(dayEightImg);
-		
+		else if (Engine.EventNum == 9) imgBox.setIcon(dayFourImg);
+		else if (Engine.EventNum == 10) imgBox.setIcon(dayTenImg );
+		else if (Engine.EventNum == 11) imgBox.setIcon(dayElevenImg);		
 		else if (Engine.EventNum == 12) imgBox.setIcon(dayTwelveImg);
 		else if (Engine.EventNum == 13) imgBox.setIcon(dayThirteenImg);
 		else if (Engine.EventNum == 14) imgBox.setIcon(dayFourteenImg);
