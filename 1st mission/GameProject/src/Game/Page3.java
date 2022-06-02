@@ -13,6 +13,8 @@ public class Page3 {
 	private ImageIcon selectBtnImage = new ImageIcon(Main.class.getResource("../images/selectBtnBasic.png"));
 	private ImageIcon selectBtnEnteredImage = new ImageIcon(Main.class.getResource("../images/selectBtnEntered.png"));
 	private Image successEndingimg = new ImageIcon(Main.class.getResource("../images/successEndingimg.jpg")).getImage();
+	private Image failEndingimg = new ImageIcon(Main.class.getResource("../images/failEndingImg.jpg")).getImage();
+	
 	private ImageIcon Life3Bg = new ImageIcon(Main.class.getResource("../images/threeLifeDiary.png"));
 	private ImageIcon Life2Bg = new ImageIcon(Main.class.getResource("../images/twoLifeDiary.png"));
 	private ImageIcon Life1Bg = new ImageIcon(Main.class.getResource("../images/oneLifeDiary.png"));
@@ -26,6 +28,12 @@ public class Page3 {
 	private ImageIcon daySixImg = new ImageIcon(Main.class.getResource("../images/daySixImg.png"));
 	private ImageIcon daySevenImg = new ImageIcon(Main.class.getResource("../images/daySevenImg.png"));
 	private ImageIcon dayEightImg = new ImageIcon(Main.class.getResource("../images/dayEightImg.png"));
+	private ImageIcon dayTenImg = new ImageIcon(Main.class.getResource("../images/dayTenImg.png"));
+	private ImageIcon dayElevenImg = new ImageIcon(Main.class.getResource("../images/dayElevenImg.png"));
+	
+	private ImageIcon dayTwelveImg = new ImageIcon(Main.class.getResource("../images/dayTwelveImg.png"));
+	private ImageIcon dayThirteenImg = new ImageIcon(Main.class.getResource("../images/dayThirteenImg.png"));
+	private ImageIcon dayFourteenImg = new ImageIcon(Main.class.getResource("../images/dayFourteenImg.png"));
 	
 	JButton select1Btn = new JButton(selectBtnImage);
 	JButton select2Btn = new JButton(selectBtnImage);
@@ -87,7 +95,9 @@ public class Page3 {
 	        	 }
 	        	 //∂Û¿Ã«¡ 0¿Ãø©µµ ø£µ˘»≠∏È¿∏∑Œ
 	        	 if (Engine.Life == 0) {
+	        		 Game.mainPanel.pageBackground = failEndingimg;
 	        		 goToEnding();
+	        		 Game.mainPanel.add(ending.nextText);
 	        		 Game.mainPanel.add(ending.endingTextBox);
 	        		 Game.mainPanel.add(ending.endingdiary);
 	        		 ending.endingTextBox.setText(ending.gameOverText);
@@ -198,8 +208,13 @@ public class Page3 {
 	
 	
 	public void goToEnding() {
-		 Sound.clip.stop();	// ¿Ã¿¸¿« ¿Ωæ« ∏ÿ√„
-		 new Sound("ENDING");	// ENDING ¿Ωæ« Ω√¿€
+		 if (Engine.EventNum == 14) {
+			 Sound.clip.stop();	// ¿Ã¿¸¿« ¿Ωæ« ∏ÿ√„
+			 new Sound("VICTORY");	// ENDING ¿Ωæ« Ω√¿€
+		 }else {
+			 Sound.clip.stop();
+			 new Sound("FAIL");
+		 }
 		 nextBtnPage3.setVisible(false);
 		 textBoxPage3.setVisible(false);
 		 diary.setVisible(false);
@@ -225,6 +240,12 @@ public class Page3 {
 		else if (Engine.EventNum == 6) imgBox.setIcon(daySixImg); 
 		else if (Engine.EventNum == 7) imgBox.setIcon(daySevenImg); 
 		else if (Engine.EventNum == 8) imgBox.setIcon(dayEightImg);
+		else if (Engine.EventNum == 9) imgBox.setIcon(dayFourImg);
+		else if (Engine.EventNum == 10) imgBox.setIcon(dayTenImg );
+		else if (Engine.EventNum == 11) imgBox.setIcon(dayElevenImg);		
+		else if (Engine.EventNum == 12) imgBox.setIcon(dayTwelveImg);
+		else if (Engine.EventNum == 13) imgBox.setIcon(dayThirteenImg);
+		else if (Engine.EventNum == 14) imgBox.setIcon(dayFourteenImg);
 		
 	}
 }
