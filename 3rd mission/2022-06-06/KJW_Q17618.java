@@ -10,12 +10,12 @@ public class KJW_Q17618 {
 		int cnt=0;
 		
 		for(int i=1; i<=n; i++) {
-			cnt+=number(i);
+			cnt+=numberSum(i);
 		}
 		System.out.println(cnt);
 	}
 	
-	public static int number(int i) {
+	public static int numberSum(int i) {
 		int sum=0; int x=i, y=0;
 		while(x/10>0) {
 			sum+=x%10;
@@ -30,8 +30,8 @@ public class KJW_Q17618 {
 }
 /*
 20220606
-¹®Á¦ ÀÌÇØµµ : 3(1~5»çÀÌ ¼ıÀÚ)
-¹®Á¦ ÇØ°á : O
-ÄÚµù ½Ã°£ : 15ºĞ
+ë¬¸ì œ ì´í•´ë„ : 3(1~5ì‚¬ì´ ìˆ«ì)
+ë¬¸ì œ í•´ê²° : O
+ì½”ë”© ì‹œê°„ : 15ë¶„
 */
 
